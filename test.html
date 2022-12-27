@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>First Page</title>
+    <style>
+        body{
+            background-color: rgb(4, 88, 167);
+            color: white;
+            font: normal 16px Arial;
+        }
+
+        #clickable {
+            width:200px;
+            height:200px;
+            background-color: rgb(197, 121, 22);
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
 </head>
 <body>
-    Olá, Mundo!
+    <h1>Iniciando os Estudos de DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In obcaecati, commodi, odio, eaque necessitatibus recusandae voluptatibus ratione facere quia perspiciatis velit. Id corrupti facere illum totam culpa libero nesciunt obcaecati!</p>
+
+    <div id="clickable"> clique em mim </div>
     <script>
-        window.alert('minha primeira mensagem');
+        var cliq = window.document.getElementById('clickable');
+        cliq.addEventListener('click', clicar)
+        cliq.addEventListener('mouseenter', emCima)
+        cliq.addEventListener('mouseout', fora)
+
+        function clicar(){
+            cliq.innerText = 'clicou';
+            cliq.style.backgroundColor = 'red';
+        }
+        function emCima() {
+            cliq.innerText = 'Mouse no Objeto';
+        }
+        function fora() {
+            cliq.innerText = 'fora';
+            cliq.style.backgroundColor = 'orange';
+        }
     </script>
 </body>
 
