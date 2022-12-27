@@ -18,6 +18,8 @@
             background-color: rgb(197, 121, 22);
             text-align: center;
             line-height: 200px;
+            border: 2px solid black;
+
         }
     </style>
 </head>
@@ -35,13 +37,19 @@
         function clicar(){
             cliq.innerText = 'clicou';
             cliq.style.backgroundColor = 'red';
+            cliq.style.color='black';
+            cliq.style.borderRadius='50%'
+            cliq.style.transition='0.8s'
         }
         function emCima() {
             cliq.innerText = 'Mouse no Objeto';
         }
         function fora() {
             cliq.innerText = 'fora';
-            cliq.style.backgroundColor = 'orange';
+            cliq.style.backgroundColor = 'rgb(197, 121, 12)';
+            cliq.style.color='white'
+            cliq.style.borderRadius='1%'
+            cliq.style.transition='1s'
         }
     </script>
 </body>
