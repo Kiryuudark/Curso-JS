@@ -13,6 +13,12 @@
             line-height: 100px;
             font-size: 20px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 15%;
+        }
+
+        div.opMenu {
+            display: none;
+            background-color: orange;
         }
     </style>
     <title>Push Button</title>
@@ -21,18 +27,31 @@
     <div id="normal" onmouse>
         <p>Botão</p>
     </div>
+    <div id="normal" class="opMenu">
+        <ul>
+            <li>Op1</li>
+            <li>Op2</li>
+            <li>Op3</li>
+        </ul>
+    </div>
 </body>
     <script>
-        var _button = window.document.getElementById('normal');
+        var _button = window.document.getElementById("normal");
         _button.addEventListener('mouseenter', emCima);
         _button.addEventListener('mouseout', fora);
 
         function emCima () {
             _button.style.backgroundColor='red';
+            _button.style.transition='2s';
+            _button.style.color="white";
+            _button.style.heigh="50px";
+            window.document.getElementsByClassName("opMenu").style.display="block";
         }
 
         function fora() {
             _button.style.backgroundColor='orange'
+            _button.style.color="black";
+            document.getElementById('opMenu').style.display="none";
         }
     </script>
 </html>
