@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    * {
+        font-family: 'Barlow Condensed', sans-serif;
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        /*Cores*/
+        --body-color: #E4E9F7;
+        --sidebar-color: #FFF;
+        --primary-color:#5aa8e9;
+        --primary-color-light: #F6F5FF;
+        --toggle-color: #DDD;
+        --text-color: #707070;
+        /*Transições*/
+        --tran-03:all 0.2s ease; 
+        --tran-04:all 0.3s ease;
+        --tran-05:all 0.4s ease;
+        --tran-06:all 0.5s ease;
+    }
+
+    body{
+        height: 100vh;
+        background-color: var(--body-color);
+    }
+
+    /*======= Características CSS =========*/ 
+    .sidebar .text {
+        font-size: 16px;
+        font: weight 500;
+        color: var(--text-color);
+    }
+
+    .sidebar .image {
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    /*=======SIDE BAR=========*/ 
+    .sidebar {
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        padding: 10px 14px;
+        background-color: var(--sidebar-color);
+        
+    }
+
+    .sidebar li{
+        height:50px;
+
+        margin-top: 10px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar header {
+        position:relative;
+    }
+
+    .sidebar .image-text img{
+        width: 40px;
+        border-radius: 10%;
+    }
+
+    .sidebar header .image-text {
+        display: flex;
+        align-items: center;
+    }
+
+    header .image-text .header-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-text .name{
+        font-weight: 600;
+    }
+
+    .header-text .profession {
+        margin-top: -2px;
+    }
+    
+    .sidebar header .toggle{
+        position: absolute;
+        display:flex;
+        top: 45%;
+        right: -27px;
+        transform: translateY(-50%);
+        width: 25px;
+        height:25px;
+        background: var(--primary-color);
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: var(--sidebar-color);
+
+    }
+
+    .sidebar li .icon {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+        font-size: 20px;
+
+    }
+
+    .sidebar li .icon, 
+    .sidebar li .text {
+        color: var(--text-color);    
+    }
+
+    .sidebar li a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;    
+    }
+
+    </style>
+    <title>Dinamic Menu</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                   <img src="logo.png" >
+                </span>
+                <div class="text header-text">
+                    <span class="name">Henrique André</span>
+                    <span class="profession">Web Developer</span>
+                </div>
+            </div>
+
+            <i class='bx bxs-chevron-right toggle'></i>        
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon' ></i>
+                    <input type="search" placeholder="Procurar...">
+
+                </li>
+                <ul class="menu-links">
+                    
+
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-home icon' ></i>
+                            <span class="text nav-text"> Dashboard</span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
